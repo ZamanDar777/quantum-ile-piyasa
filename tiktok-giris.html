@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TikTok girişi — Sosyal Kralice</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #1d1d1f; background: #fff; }
+  code { display: block; word-break: break-all; padding: 12px; background: #f1f3f4; border-radius: 8px; font-size: 14px; }
+  button { margin-top: 12px; padding: 10px 16px; font-size: 15px; border-radius: 8px; border: 0; background: #0b57d0; color: #fff; cursor: pointer; }
+  .alt { color: #666; }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #121212; } code { background: #222; } .alt { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>TikTok girişi tamamlandı</h1>
+<p class="alt">Sosyal Kralice (Quantum ile Piyasa) TikTok yetkilendirme dönüş sayfası. Bu sayfa hiçbir veriyi saklamaz ya da
+bir yere göndermez; yalnızca TikTok'un verdiği tek kullanımlık kodu ekranda gösterir.</p>
+<p id="durum">Kod okunuyor…</p>
+<code id="kod"></code>
+<button id="kopyala" hidden>Kodu kopyala</button>
+<script>
+  const p = new URLSearchParams(location.search);
+  const kod = p.get("code"), hata = p.get("error_description") || p.get("error");
+  const durum = document.getElementById("durum"), kutu = document.getElementById("kod"), dugme = document.getElementById("kopyala");
+  if (kod) {
+    durum.textContent = "Bu kodu Sosyal Kralice'ye yapıştırın (birkaç dakika içinde geçerliliğini yitirir):";
+    kutu.textContent = kod;
+    dugme.hidden = false;
+    dugme.onclick = () => navigator.clipboard.writeText(kod).then(() => { dugme.textContent = "Kopyalandı"; });
+  } else {
+    durum.textContent = hata ? ("TikTok girişi tamamlanamadı: " + hata) : "Bu adreste yetkilendirme kodu yok.";
+    kutu.hidden = true;
+  }
+</script>
+</body>
+</html>
