@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sosyal Kralice — Quantum ile Piyasa</title>
+<meta name="description" content="Sosyal Kralice: Quantum ile Piyasa yayınlarını hazırlayıp kanal sahibinin onayıyla YouTube ve TikTok'a yükleyen araç.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="ust"><div class="kap">
+  <a class="marka" href="index.html"><img src="logo.png" alt="">Quantum ile Piyasa</a>
+  <nav>
+    <a href="index.html">Ana sayfa</a>
+    <a href="uygulama.html" aria-current="page">Sosyal Kralice</a>
+    <a href="gizlilik.html">Gizlilik</a>
+    <a href="hizmet-sartlari.html">Şartlar</a>
+    <a href="index.html#iletisim">İletişim</a>
+  </nav>
+</div></header>
+
+<main class="kap belge">
+<section>
+  <h1>Sosyal Kralice</h1>
+  <p class="alt">Quantum ile Piyasa yayınlarını hazırlayan ve kanalın kendi hesaplarına yükleyen yayın aracı</p>
+  <p>Sosyal Kralice, Quantum ile Piyasa kanalının sahibi tarafından, yalnızca kanalın kendi YouTube ve TikTok hesaplarında
+     kullanılan bir masaüstü aracıdır. Kamuya açık bir hizmet değildir; başka kişiler hesap açamaz ya da araca kendi hesaplarını bağlayamaz.</p>
+</section>
+
+<section>
+  <h2>Ne yapar</h2>
+  <div class="izgara">
+    <div class="kart"><h3>Veriyi derler</h3><p>Borsa, emtia, ekonomik takvim ve kripto piyasası verilerini kamuya açık kaynaklardan toplar.</p></div>
+    <div class="kart"><h3>Yayını hazırlar</h3><p>Senaryoyu yazar, seslendirir; uzun video, kısa dikey video ve kapak görselini üretir.</p></div>
+    <div class="kart"><h3>Onaya sunar</h3><p>TikTok paylaşımından önce kanal sahibine önizleme, açıklama ve gizlilik ayarlarını gösterir.</p></div>
+    <div class="kart"><h3>Yayınlar</h3><p>Onaylanan videoyu kanalın kendi hesabına yükler ve paylaşımın durumunu izler.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>TikTok paylaşım akışı</h2>
+  <ol class="adim">
+    <li>Kanal sahibi araçtaki onay sayfasında <strong>TikTok'a bağlan</strong> düğmesiyle TikTok Login Kit üzerinden kendi hesabına giriş
+        yapar ve izin verir. Araç yalnız temel profil bilgisini (kullanıcı adı, profil görseli) okur.</li>
+    <li>Her yeni kısa video için onay sayfası videonun önizlemesini, açıklama metnini ve hesabın kullanıcı adını gösterir.</li>
+    <li>Kanal sahibi gizlilik düzeyini (herkese açık, arkadaşlar, yalnız ben), yorum, düet ve birleştirme izinlerini ve
+        yapay zekâ ile üretilmiş içerik etiketini kendisi seçer. Varsayılan bir seçim dayatılmaz.</li>
+    <li>Kanal sahibi <strong>Paylaş</strong> düğmesine bastığında video Content Posting API ile hesaba gönderilir; araç
+        paylaşımın işlenme durumunu gösterir. Onaylanmayan hiçbir video paylaşılmaz.</li>
+    <li>Bağlantı TikTok uygulama ayarlarından istenildiği zaman kaldırılabilir; erişim belirteçleri yalnız kanal sahibinin
+        bilgisayarında saklanır.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Kullanılan izinler</h2>
+  <table>
+    <tr><th>İzin</th><th>Ne için</th></tr>
+    <tr><td>user.info.basic</td><td>Onay sayfasında hangi hesaba paylaşılacağını göstermek (kullanıcı adı, profil görseli)</td></tr>
+    <tr><td>video.publish</td><td>Kanal sahibinin onayladığı videoyu kendi profilinde yayınlamak</td></tr>
+  </table>
+</section>
+
+<section id="en" lang="en">
+  <h2>In English</h2>
+  <p><strong>Sosyal Kralice</strong> is a desktop tool used only by the owner of the Quantum ile Piyasa channel, on the channel's own
+     YouTube and TikTok accounts. It is not a public service and third parties cannot connect their accounts.</p>
+  <p>It compiles public market data, writes and narrates the episode, and renders long videos, vertical clips and thumbnails.
+     For TikTok, the owner signs in with Login Kit; for every clip the approval page shows a preview, the caption and the
+     account name, and the owner chooses the privacy level, comment/duet/stitch settings and the AI-generated content label.
+     Only after the owner presses <em>Post</em> is the video sent with the Content Posting API. Scopes: user.info.basic (show the
+     target account) and video.publish (post approved videos). Tokens stay on the owner's
+     computer and access can be revoked in TikTok settings at any time.</p>
+</section>
+</main>
+
+<footer class="alt-bilgi"><div class="kap">
+  <a href="gizlilik.html">Gizlilik Politikası / Privacy Policy</a>
+  <a href="hizmet-sartlari.html">Hizmet Şartları / Terms of Service</a>
+  <a href="index.html">Ana sayfa</a>
+  <span>© 2026 Quantum ile Piyasa</span>
+</div></footer>
+</body>
+</html>
